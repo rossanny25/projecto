@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" type="text/css">
+</head>
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="#news">Estrenos</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li style="float:right"><a class="active" href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1 class="page-title">Contactanos</h1>
+        <section class="flex-container">
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <input id="name" type="text" class="form-control" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                        <input id="lastname" type="text" class="form-control" placeholder="Apellido" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <input id="email" type="email" class="form-control" placeholder="Correo" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <textarea id="msg" class="form-control" rows="5" required placeholder="Escriba un mensaje"></textarea>
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </div>
+    <script type="text/javascript" src="javascript/eventos.js"></script>
+    <script type="text/javascript" src="javascript/validation.js"></script>
+
+</body>
+
+</html>
