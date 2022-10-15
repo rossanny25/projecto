@@ -1,6 +1,6 @@
 var apiKey = '1448a0035743e6ddab6d44b9f7de89e4';
 var language = 'es-Es';
-var url = 'http://api.themoviedb.org/3/movie/popular';
+var url = 'https://api.themoviedb.org/3/movie/popular';
 
 function getImageMovie(poster) {
   return `https://image.tmdb.org/t/p/w500${poster}`;
