@@ -1,6 +1,10 @@
 html {
     height: 100%;
 }
+nav a:hover {
+    text-decoration:none;
+    color: #fff;
+}
 
 body {
     margin: 0 0;
@@ -50,6 +54,8 @@ nav>ul>li a:hover {
     margin-bottom: 25px;
     text-align: center;
     font-weight: bold;
+    font-size: 42px;
+    color: #B03217;
 }
 
 
@@ -144,6 +150,12 @@ nav>ul>li a:hover {
     line-height: 1.4;
 }
 
+.card h1, h2{
+    flex: 1;
+    /* make p grow to fill available space*/
+    color: #B03217;
+}
+
 /* typography */
 h1 {
     font-size: 20px;
@@ -234,4 +246,16 @@ h1 {
         float: none;
         width: 100%;
     }
+}
+
+.more-pupulate >.image-desc {
+    transition: all .13 ease-in;
+    cursor: pointer;
+}
+
+
+.more-pupulate > .image-desc:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    opacity: .3;
 }
