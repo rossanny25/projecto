@@ -44,8 +44,176 @@ nav>ul>li a:hover {
     align-items: center;
     justify-content: center;
 }
+
 .page-title {
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
+    font-weight: bold;
+}
+
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background-image: url('../img/cinta.jpg');
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #B03217;
+    font-weight: bold;
+}
+
+.header p {
+    color: #B03217;
+}
+
+.band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+}
+
+@media only screen and (min-width: 500px) {
+    .band {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item-1 {
+        grid-column: 1/ span 2;
+    }
+
+    .item-1 h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .band {
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+
+/* card */
+
+.card {
+    min-height: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #444;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+}
+
+.card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card article {
+    padding: 20px;
+    display: flex;
+
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.card .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.card p {
+    flex: 1;
+    /* make p grow to fill available space*/
+    line-height: 1.4;
+}
+
+/* typography */
+h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+
+.card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 2em 0 0 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+
+.image-desc {
+    background-color: #B03217;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Add a card effect for articles */
+.cardhome {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
 }

@@ -7,22 +7,38 @@ function getImageMovie(poster) {
 }
 
 var renderMovies = function (result) {
-  let table = document.getElementById('cul');
+  let table = document.getElementsByClassName('band')[0];
+  console.log(table);
 
   result.forEach(function (data) {
-    let tr = document.createElement('tr');
-    let td1 = document.createElement('td');
-    let image = document.createElement('img');
-    image.src = this.getImageMovie(data.poster_path);
-    td1.appendChild(image);
-    let td2 = document.createElement('td');
-    td2.innerHTML = data.title;
-    let td3 = document.createElement('td');
-    td3.innerHTML = data.overview;
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    table.appendChild(tr);
+    let div = document.createElement('div');
+    let a = document.createElement('a');
+        a.className = 'card';
+
+    let divThumb = document.createElement('div');
+        divThumb.className = 'thumb';
+        divThumb.style = `background-image: url(${this.getImageMovie(data.poster_path)})`;
+        
+    let article = document.createElement('article');
+    let h1 = document.createElement('h1');
+        h1.innerHTML = data.title;
+    let p = document.createElement('p');
+        p.innerHTML = data.overview;
+
+    
+    let span = document.createElement('span');
+        span.innerHTML = `Popularidad: ${data.popularity}`;
+
+    article.appendChild(h1);
+    article.appendChild(p);
+    article.appendChild(span);
+
+    a.appendChild(divThumb);
+    a.appendChild(article);
+
+    div.appendChild(a);
+
+    table.appendChild(div);   
   });
 };
 
