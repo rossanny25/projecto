@@ -29,9 +29,19 @@ var renderMovies = function (result) {
     let span = document.createElement('span');
         span.innerHTML = `Popularidad: ${data.popularity}`;
 
+    let a2 = document.createElement('a');
+        a2.textContent = `Ver `;
+        a2.className = 'btn-see';
+        a2.href = 'detail.html';
+
+    let i = document.createElement('i');
+        i.className = 'fa fa-eye';
+        a2.appendChild(i);
+
     article.appendChild(h1);
     article.appendChild(p);
     article.appendChild(span);
+    article.appendChild(a2);
 
     a.appendChild(divThumb);
     a.appendChild(article);
