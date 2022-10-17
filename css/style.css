@@ -33,7 +33,7 @@ nav>ul>li a:hover {
 }
 
 .active {
-    background-color: #46B1E0;
+    background-color: #B03217;
 }
 
 .flex-container {
@@ -179,11 +179,29 @@ h1 {
     padding-left: 20px;
 }
 
+.seeall {
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    padding: 20px 30px;
+    display: inline-block;
+    color: #fff;
+    background-color: #B03217;
+    margin-top: 10px;
+}
 
 .image-desc {
     background-color: #B03217;
     width: 100%;
     padding: 10px;
+}
+
+.red-socials {
+    text-align: center;
+}
+
+.red-socials span {
+    margin: 15px 15px;
 }
 
 /* Add a card effect for articles */
